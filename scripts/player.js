@@ -40,12 +40,19 @@ class Player {
 
   skipTo (percent) {
     if (this.playState !== 'playing') { return }
-    this.soundObject.setTime( (percent / 100) * this.soundObject.getDuration() );
+  this.soundObject.setTime( (percent / 100) * this.getDuration() );
   }
 
   setVolume (percent) {
     this.volume = percent;
     this.soundObject.setVolume(percent);
+  }
+
+  prettyTime (timeInSeconds) {
+    const minutes = Math.floor(timeInSeconds / 60);
+    const zeroSeconds = "0" + (Math.floor(timeInSeconds % 60))
+    const seconds = zeroSeconds.substring(zeroSeconds.length -2, zeroSeconds.length);
+    return `${minutes}:${seconds}`;
   }
 
 }
