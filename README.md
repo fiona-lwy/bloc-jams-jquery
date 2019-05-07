@@ -1,3 +1,5 @@
+# Bloc Jams
+
 _BLOC JAMS_ is a **Music Player App**.
 
 It meets the requirements and expectations listed below.
